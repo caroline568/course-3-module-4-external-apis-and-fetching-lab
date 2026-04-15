@@ -1,79 +1,98 @@
-/* General Styles */
+*{
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
+  background: #e8f4ff;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
+  text-align: center;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 h1 {
-  text-align: center;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
-/* Input Field and Button */
-#city-input {
-  display: block;
-  margin: 20px auto;
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
   padding: 10px;
-  width: 80%;
-  max-width: 400px;
-  font-size: 16px;
+  width: 200px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
-#fetch-weather {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
+button {
+  padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  background: #0077ff;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-#fetch-weather:hover {
-  background-color: #0056b3;
+button:hover {
+  background: #005fcc;
 }
 
-/* Weather Display Section */
-#weather-display {
-  margin: 20px auto;
-  padding: 10px;
-  width: 90%;
-  max-width: 600px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Cancel button */
+#cancelBtn {
+  background: #ff4d4d;
 }
 
-/* Error Message */
-#error-message {
+#cancelBtn:hover {
+  background: #cc0000;
+}
+
+/* Alerts */
+.alert-card {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border-left: 5px solid #0077ff;
+  text-align: left;
+}
+
+/* Error */
+#error {
   color: red;
   font-weight: bold;
-  text-align: center;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-/* Hidden Class for Error Handling */
-.hidden {
+/* LOADING FIX (NO LAYOUT SHIFT) */
+#loading {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.4);
+
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 20px;
+  z-index: 9999;
 }
 
-/* BONUS: Loading Spinner */
-#loading-spinner {
+#loading {
   display: none;
-  margin: 20px auto;
-  text-align: center;
-}
-
-#loading-spinner img {
-  width: 50px;
-  height: 50px;
 }
